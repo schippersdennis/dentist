@@ -1,35 +1,114 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  margin: 4rem;
-  background-color: lightslategray;
+	margin: 4rem;
+	background-color: lightslategray;
 }
 
 nav li {
-  display: inline-block;
-  list-style: none;
-  margin-right: 4rem;
+	display: inline-block;
+	list-style: none;
+	margin-right: 4rem;
 }
 
 nav {
-  margin-bottom: 4rem;
-  font-size: 2rem;
+	margin-bottom: 4rem;
+	font-size: 2rem;
 }
 
 nav a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 nav a:hover {
-  color: greenyellow;
+	color: greenyellow;
 }
 
 a,
 a:focus,
 a:visited {
-  color: darksalmon;
-  outline: none;
+	color: rgb(240, 205, 193);
+	outline: none;
+}
+/* home */
+.dentalOverview ol {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 40px;
+	grid-row-gap: 0px;
+
+	border: 1px solid rgb(240, 205, 193);
+	padding: 20px;
+}
+.dentalOverview ol li {
+	margin-left: 20px;
+	padding-left: 10px;
+}
+.dentalOverview ol li:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.207);
+}
+.dentalOverview ol li:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.363);
+}
+.dentalOverview h2 {
+	color: rgb(240, 205, 193);
+	margin: 20px 0;
+}
+.inputOverview h2 {
+	color: rgb(240, 205, 193);
+	margin: 20px 0;
+}
+
+.inputOverview select,
+option {
+	font-size: 18px;
+	padding: 5px;
+}
+input,
+button {
+	font-size: 18px;
+	padding: 5px;
+}
+.lihome {
+	padding: 5px;
+}
+.sick {
+	display: flex;
+}
+.sick input {
+	margin-left: 10px;
+}
+li select {
+	margin-right: 10px;
+}
+.lihome {
+	position: relative;
+}
+.medicicon {
+	color: rgba(160, 77, 77, 0.887);
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+}
+
+.iconhome {
+	color: rgba(160, 77, 77, 0.887);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding: 10px 0;
+}
+.iconhome span {
+	color: black;
+	font-weight: 700;
+	padding-left: 10px;
+}
+.editForm {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }

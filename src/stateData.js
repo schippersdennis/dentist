@@ -1,5 +1,3 @@
-import { createAppointments } from "./createAppointments"
-
 export const patients = [
 	{
 		id: 1,
@@ -463,6 +461,7 @@ export const dentists = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1940,
 		not_available_due_illness: false,
+		dentalcrew: true,
 	},
 	{
 		id: 2,
@@ -473,6 +472,7 @@ export const dentists = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1960,
 		not_available_due_illness: true,
+		dentalcrew: true,
 	},
 	{
 		id: 3,
@@ -483,6 +483,7 @@ export const dentists = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1970,
 		not_available_due_illness: false,
+		dentalcrew: true,
 	},
 	{
 		id: 4,
@@ -493,6 +494,7 @@ export const dentists = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1980,
 		not_available_due_illness: false,
+		dentalcrew: true,
 	},
 ]
 
@@ -506,6 +508,7 @@ export const assistants = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1990,
 		not_available_due_illness: false,
+		assistant: true,
 	},
 	{
 		id: 2,
@@ -516,7 +519,17 @@ export const assistants = [
 		phone: "+86 926 962 3769",
 		year_of_birth: 1988,
 		not_available_due_illness: false,
+		assistant: true,
+	},
+	{
+		id: 3,
+		name: "Without",
+		surname: "Assistant",
+		email: "dentistonly@tandartspraktijkbvt.nl",
+		gender: "unknow",
+		phone: "without number",
+		year_of_birth: 1969,
+		not_available_due_illness: false,
+		assistant: true,
 	},
 ]
-
-export const appointments = createAppointments(patients, dentists, assistants)

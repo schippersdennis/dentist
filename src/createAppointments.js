@@ -12,11 +12,16 @@ const getRandomTime = () => {
 
 const addDentalCrew = (dentalCrew) => {
 	const person = dentalCrew[Math.floor(Math.random() * dentalCrew.length)]
-	return `${person.name} ${person.surname}`
+
+	return {
+		id: person.id,
+		name: `${person.name} ${person.surname}`,
+		available: person.not_available_due_illness,
+	}
 }
 
 const getRandomPatient = (patients) => {
-	const person = patients[Math.floor(Math.random() * 50)]
+	const person = patients[Math.floor(Math.random() * patients.length)]
 	return `${person.name} ${person.surname}`
 }
 
@@ -29,7 +34,14 @@ const createAppointment = (patients, dentists, assistants) => ({
 })
 
 export const createAppointments = (patients, dentists, assistants) => {
-	return Array(150)
+	const newAppointments = Array(150)
 		.fill(0)
 		.map((_) => createAppointment(patients, dentists, assistants))
+	const newAppointmentsIDAdded = newAppointments.map((item, index) => {
+		item.id = index + 1
+		return item
+	})
+	return newAppointmentsIDAdded
 }
+
+// export const appointments = createAppointments(patients, dentists, assistants)

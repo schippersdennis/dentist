@@ -1,31 +1,35 @@
 .dayview li {
-  list-style-type: none;
-  background-color: lightyellow;
+	list-style-type: none;
+	background-color: lightyellow;
 }
 
 .dayview .appointment {
-  border: 2px solid grey;
-  width: 60%;
-  margin-bottom: 20px;
+	border: 2px solid grey;
+	width: 60%;
+	margin-bottom: 20px;
 }
 
 .dayview .time,
 .dayview .patient {
-  height: 30px;
-  padding: 10px;
+	height: 30px;
+	padding: 10px;
 }
 
 .dayview .time {
-  float: right;
-  background-color: aquamarine;
+	float: right;
+	background-color: rgb(153, 199, 157);
 }
 
 .dayview .patient {
-  font-weight: bold;
-  background-color: deepskyblue;
+	font-weight: bold;
+	background-color: rgb(153, 199, 157);
 }
 
 .dayview .dentist,
 .dayview .assistant {
-  padding: 10px;
+	padding: 10px;
+}
+select {
+	font-size: 20px;
+	margin-bottom: 30px;
 }
