@@ -162,25 +162,12 @@ const App = () => {
 			assistant: findAssistant,
 		}
 		const filterDateTime = (newAppointMent, dentalPractice) => {
-			const filterByDentist = dentalPractice.appointments.some((appointment) => {
-				if (
-					//dentist
-					appointment.dentist.id === newAppointMent.dentist.id &&
-					appointment.assistant.id === newAppointMent.assistant.id &&
-					appointment.day === newAppointMent.day &&
-					appointment.time === newAppointMent.time
-				) {
-					return appointment
-				}
-				if (
-					//assistant
-					appointment.assistant.id === newAppointMent.assistant.id &&
-					appointment.day === newAppointMent.day &&
-					appointment.time === newAppointMent.time
-				)
-					return appointment
-				return false
-			})
+			const dentist = newAppointMent.dentist.id
+			const assistant = newAppointMent.assistant.id
+			const day = newAppointMent.day
+			const time = newAppointMent.time
+
+			const filterByDentist = checkDentistAssistant(dentist, assistant, day, time)
 
 			if (!filterByDentist) {
 				const appointmentsState = [...dentalPractice.appointments]
